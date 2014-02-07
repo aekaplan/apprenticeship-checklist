@@ -327,7 +327,7 @@ $(function() {
     return currentValue === true ? ' checked="checked"' : '';
   });
 
-  _.each(Checklist.SeedData, function(section) {
+  _.each(Checklist.DesignerSeedData, function(section) {
     var c = new Checklist.Section(section.tasks, { name: section.name });
     var v = new Checklist.SectionView({
       collection: c,

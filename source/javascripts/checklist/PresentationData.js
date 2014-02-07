@@ -1,5 +1,5 @@
 namespace("Checklist", {
-  PresentationData: {
+  DesignerPresentationData: {
     'graphic-design': {
       title: "Graphic Design",
       tasks: {
@@ -17,6 +17,7 @@ namespace("Checklist", {
         'merge-conflicts': 'foo'
       }
     }
-  }
+  },
+  DeveloperPresentationData: {}
 });
 

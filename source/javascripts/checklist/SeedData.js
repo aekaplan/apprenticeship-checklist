@@ -1,5 +1,5 @@
 namespace("Checklist", {
-  SeedData: [
+  DesignerSeedData: [
     {
       name: "graphic-design",
       tasks: [
@@ -8,6 +8,7 @@ namespace("Checklist", {
         { name: "aesthetic", complete: true }
       ]
     },
+
     {
       name: "git",
       tasks: [
@@ -18,6 +19,8 @@ namespace("Checklist", {
       ]
     }
 
+  ],
+  DeveloperSeedData: [
   ]
 });
 

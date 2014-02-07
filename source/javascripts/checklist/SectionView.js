@@ -11,13 +11,13 @@ namespace("Checklist", {
     },
 
     presentSectionName: function() {
-      return Checklist.PresentationData[this.collection.name].title;
+      return Checklist.DesignerPresentationData[this.collection.name].title;
     },
 
     presentTasks: function() {
       return _.map(this.collection.models, function(model) {
         return {
-          description: Checklist.PresentationData[this.collection.name].tasks[model.get('name')],
+          description: Checklist.DesignerPresentationData[this.collection.name].tasks[model.get('name')],
           complete: model.get('complete')
         }
       }, this);
