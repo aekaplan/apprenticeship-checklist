@@ -1,42 +1,11 @@
 ---
 title: Design Checklist
 ---
-<section id="js-sections">
-This is for JS rendered sections. If this is here you aren't rendering!
-</section>
-
 <section>
   <div class='container'>
     <h2>Graphic Design</h2>
-    <label>
-      <input type="checkbox">
-      <span>Become an intermediate level user of a graphics editor of your choice (Adobe Illustrator/Photoshop).</span>
-    </label>
-
-    <label>
-      <input type="checkbox">
-      <span>Understand color theory/know how to use it on the web.</span>
-    </label>
-
-    <label>
-      <input type="checkbox">
-      <span>Learn to design within the “8th Light Aesthetic” and also develop a distinct personal style of your own.</span>
-    </label>
-
-    <label>
-      <input type="checkbox">
-      <span>Develop an understanding of the basic principles of usability (both generally and as it relates to websites.)</span>
-    </label>
-
-    <label>
-      <input type="checkbox">
-      <span>Learn about/become comfortable conducting usability tests.</span>
-    </label>
-
-    <label>
-      <input type="checkbox">
-      <span>Establish a proficiency with Balsamiq (for wireframing).</span>
-    </label>
+    <div data-section-id='graphic-design'>
+    </div>
 
     <hr>
     <h3>Resources</h3>
@@ -57,25 +26,8 @@ This is for JS rendered sections. If this is here you aren't rendering!
 <section>
   <div class="container">
     <h2>Git/GitHub</h2>
-    <label>
-      <input type="checkbox">
-      <span>Install Git and create a GitHub account.</span>
-    </label>
-
-    <label>
-      <input type="checkbox">
-      <span>Understand the GitHub flow and create a repo.</span>
-    </label>
-
-    <label>
-      <input type="checkbox">
-      <span>Practice using git add, commit, push and pull.</span>
-    </label>
-
-    <label>
-      <input type="checkbox">
-      <span>Learn how to solve a merge conflict.</span>
-    </label>
+    <div data-section-id='git'>
+    </div>
 
     <hr>
     <h3>Resources</h3>
@@ -355,16 +307,14 @@ This is for JS rendered sections. If this is here you aren't rendering!
 </section>
 
 <script id="section-template" type="text/x-handlebars-template">
-  <div class='container'>
-    <h2>{{name}}</h2>
-    {{#each tasks}}
-    <label>
-      <input type="checkbox" {{checked complete}}>
-      <span>{{description}}</span>
-    </label>
-    {{/each}}
-  </div>
+  {{#each tasks}}
+  <label>
+    <input type="checkbox" {{checked complete}}>
+    <span>{{description}}</span>
+  </label>
+  {{/each}}
 </script>
+
 <script type="text/javascript">
 
 $(function() {
@@ -381,7 +331,7 @@ $(function() {
     var c = new Checklist.Section(section.tasks, { name: section.name });
     var v = new Checklist.SectionView({
       collection: c,
-      el: $('#js-sections'),
+      el: $('[data-section-id=' + section.name + ']'),
       template: template
     });
     v.render();

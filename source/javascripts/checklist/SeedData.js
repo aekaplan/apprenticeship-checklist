@@ -4,7 +4,7 @@ namespace("Checklist", {
       name: "graphic-design",
       tasks: [
         { name: "intermediate-graphics-editor" },
-        { name: "color-theory", complete: false },
+        { name: "color-theory" },
         { name: "aesthetic", complete: true }
       ]
     },

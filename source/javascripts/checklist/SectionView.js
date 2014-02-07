@@ -16,7 +16,10 @@ namespace("Checklist", {
 
     presentTasks: function() {
       return _.map(this.collection.models, function(model) {
-        return { description: Checklist.PresentationData[this.collection.name].tasks[model.get('name')] }
+        return {
+          description: Checklist.PresentationData[this.collection.name].tasks[model.get('name')],
+          complete: model.get('complete')
+        }
       }, this);
     }
   })
