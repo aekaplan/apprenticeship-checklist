@@ -1,6 +1,10 @@
 ---
 title: Design Checklist
 ---
+<section id="js-sections">
+This is for JS rendered sections. If this is here you aren't rendering!
+</section>
+
 <section>
   <div class='container'>
     <h2>Graphic Design</h2>
@@ -349,3 +353,38 @@ title: Design Checklist
     </ul>
   </div>
 </section>
+
+<script id="section-template" type="text/x-handlebars-template">
+  <div class='container'>
+    <h2>{{name}}</h2>
+    {{#each tasks}}
+    <label>
+      <input type="checkbox" {{checked complete}}>
+      <span>{{description}}</span>
+    </label>
+    {{/each}}
+  </div>
+</script>
+<script type="text/javascript">
+
+$(function() {
+  $(".progress-bar figure").css("width", "40%");
+
+  var source = $('#section-template').html();
+  template = Handlebars.compile(source);
+
+  Handlebars.registerHelper('checked', function(currentValue) {
+    return currentValue === true ? ' checked="checked"' : '';
+  });
+
+  _.each(Checklist.SeedData, function(section) {
+    var c = new Checklist.Section(section.tasks, { name: section.name });
+    var v = new Checklist.SectionView({
+      collection: c,
+      el: $('#js-sections'),
+      template: template
+    });
+    v.render();
+  });
+});
+</script>

@@ -1,1 +1,12 @@
+//= require vendor/jquery-2.1.0.min
+//= require vendor/underscore
+//= require vendor/handlebars-v1.3.0
+//= require vendor/backbone
+//= require vendor/backbone.localStorage
+//= require namespace
+//= require checklist/Task
+//= require checklist/Section
+//= require checklist/SectionView
+//= require checklist/SeedData
+//= require checklist/PresentationData
 //= require_tree .
