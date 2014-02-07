@@ -7,7 +7,17 @@ namespace("Checklist", {
         { name: "color-theory", complete: false },
         { name: "aesthetic", complete: true }
       ]
+    },
+    {
+      name: "git",
+      tasks: [
+        { name: "install-git" },
+        { name: "git-workflow" },
+        { name: "git-practice" },
+        { name: "merge-conflicts" }
+      ]
     }
+
   ]
 });
 
