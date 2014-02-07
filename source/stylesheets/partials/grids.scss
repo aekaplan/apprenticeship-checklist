@@ -1,0 +1,28 @@
+/* Grid
+-------------------------------------------------------------- */
+.column {
+  float: left;
+  margin-left: 5%;
+  &:first-child { margin-left: 0; }
+
+  &.full { width: 100%; }
+  &.two-thirds { width: 65%; }
+  &.half { width: 47.5%; }
+  &.one-third { width: 30%; }
+  &.one-fourth { width: 21.2%; }
+}
+
+/* Media Queries
+-------------------------------------------------------------- */
+@media screen and (max-width: 640px) {
+  .column {
+    &.full,
+    &.two-thirds,
+    &.half,
+    &.one-third,
+    &.one-fourth {
+      margin: 2em 0 0 0;
+      width: 100%;
+    }
+  }
+}

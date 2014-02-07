@@ -1,0 +1,38 @@
+/* Typography
+-------------------------------------------------------------- */
+h1, h2, h3, h4, h5 {
+  color: #111;
+  font-weight: 600;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+  line-height: 1.3em;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: .5rem;
+}
+
+p {
+  color: #999;
+  margin: 0 auto;
+  max-width: 30rem;
+}
+
+em {
+  font-style: italic;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}

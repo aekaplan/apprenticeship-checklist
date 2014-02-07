@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* Layout
+-------------------------------------------------------------- */
+/* Apply box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font: 125%/1.5 "chaparral-pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 700px;
+  overflow: hidden;
+  padding: 3rem 0;
+  width: 90%;
+}
+
+/* Header
+-------------------------------------------------------------- */
+header {
+  background: #f4f4f4;
+  text-align: center;
+}
+
+header .container { padding: 5rem 0; }
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Section
+-------------------------------------------------------------- */
+section { border-top: 1px solid #eee; }
+
+/* Grid
+-------------------------------------------------------------- */
+.column {
+  float: left;
+  margin-left: 5%;
+}
+.column:first-child { margin-left: 0; }
+
+.column.full { width: 100%; }
+.column.two-thirds { width: 65%; }
+.column.half { width: 47.5%; }
+.column.one-third { width: 30%; }
+.column.one-fourth { width: 21.2%; }
+
+/* Links
+-------------------------------------------------------------- */
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+/* Elements
+-------------------------------------------------------------- */
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 2em 0;
+  width: 3rem;
+}
+
+img {
+  display: block;
+  margin: 0 auto 0.6rem auto;
+  width: 80px;
+}
+
+.progress-bar {
+  background: #ececec;
+  height: 2rem;
+  margin-top: 2rem;
+}
+
+figure {
+  background: #111;
+  width: 0;
+  height: 2rem;
+  margin: 0;
+  -webkit-transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
+  -o-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+
+/* Inputs
+-------------------------------------------------------------- */
+input[type="checkbox"] {
+  float: left;
+  margin: 0.3rem 0.6rem 0 0;
+}
+
+label {
+  color: #333;
+  display: block;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+label:last-child { margin-bottom: 0; }
+
+label span {
+  float: left;
+  width: 90%;
+}
+
+/* Media Queries
+-------------------------------------------------------------- */
+@media screen and (max-width: 640px) {
+  html { font-size: 100%; }
+  .container, header .container { padding: 3rem 0; }
+  hr { margin: 2rem 0; }
+
+  .column.full,
+  .column.two-thirds,
+  .column.half,
+  .column.one-third,
+  .column.one-fourth {
+    margin: 2em 0 0 0;
+    width: 100%;
+  }
+  .column:first-child { margin-top: 0; }
+}
