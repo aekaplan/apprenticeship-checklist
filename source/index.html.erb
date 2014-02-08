@@ -309,7 +309,7 @@ title: Design Checklist
 <script id="section-template" type="text/x-handlebars-template">
   {{#each tasks}}
   <label>
-    <input type="checkbox" {{checked complete}}>
+    <input type="checkbox" data-name={{name}} {{checked complete}}>
     <span>{{description}}</span>
   </label>
   {{/each}}
