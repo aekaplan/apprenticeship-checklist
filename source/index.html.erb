@@ -288,39 +288,5 @@ title: Design Checklist
   </section>
 
 </div>
-<script id="section-template" type="text/x-handlebars-template">
-  {{#each tasks}}
-  <label>
-    <input type="checkbox" data-name={{name}} {{checked complete}}>
-    <span>{{description}}</span>
-  </label>
-  {{/each}}
-</script>
 
-<script type="text/javascript">
-
-  $(function() {
-    var source = $('#section-template').html();
-    var template = Handlebars.compile(source);
-
-    Handlebars.registerHelper('checked', function(currentValue) {
-      return currentValue === true ? ' checked="checked"' : '';
-      });
-
-    var collection = new Checklist.Tasks();
-    collection.fetch();
-    if (collection.models.length === 0) {
-    _.each(Checklist.DesignerSeedData, function(task) {
-      collection.create(task);
-      });
-    }
-
-    var view = new Checklist.ChecklistView({
-      collection: collection,
-      template: template,
-      el: $('[data-id="checklist"]')
-    });
-    view.render();
-  });
-</script>
-
+<%= partial(:checklist_javascript) %>

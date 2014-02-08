@@ -7,6 +7,5 @@
 //= require checklist/Task
 //= require checklist/Tasks
 //= require checklist/ChecklistView
-//= require checklist/SeedData
 //= require checklist/PresentationData
 //= require_tree .
