@@ -318,16 +318,14 @@ title: Design Checklist
 <script type="text/javascript">
 
 $(function() {
-  $(".progress-bar figure").css("width", "40%");
-
   var source = $('#section-template').html();
-  template = Handlebars.compile(source);
+  var template = Handlebars.compile(source);
 
   Handlebars.registerHelper('checked', function(currentValue) {
     return currentValue === true ? ' checked="checked"' : '';
   });
 
-  collection = new Checklist.Tasks();
+  var collection = new Checklist.Tasks();
   collection.fetch();
   if (collection.models.length === 0) {
     _.each(Checklist.DesignerSeedData, function(task) {

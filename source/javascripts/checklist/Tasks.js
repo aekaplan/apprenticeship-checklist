@@ -12,6 +12,17 @@ namespace("Checklist", {
 
     tasksForSection: function(section) {
       return this.where({ section: section });
+    },
+
+    percentTasksCompleted: function() {
+      return (this.completedTaskCount() / this.models.length);
+    },
+
+    completedTaskCount: function() {
+      var completedTasks = this.filter(function(model) {
+        return model.get('complete') === true;
+      });
+      return completedTasks.length;
     }
 
   })
