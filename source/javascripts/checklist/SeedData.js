@@ -16,8 +16,3 @@ namespace('Checklist', {
   DeveloperSeedData: [
   ]
 });
-
-namespace('Checklist', {
-  Data: {}
-});
-
