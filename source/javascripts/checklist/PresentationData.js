@@ -9,10 +9,10 @@ namespace("Checklist", {
     },
     'git': {
       tasks: {
-        'install-git': 'foo',
-        'git-workflow': 'foo',
-        'git-practice': 'foo',
-        'merge-conflicts': 'foo'
+        'install-git': 'Install Git and create a GitHub account.',
+        'git-workflow': 'Understand the GitHub flow and create a repo.',
+        'git-practice': 'Practice using git add, commit, push, and pull.',
+        'merge-conflicts': 'Learn how to resolve merge conflicts.'
       }
     }
   },
