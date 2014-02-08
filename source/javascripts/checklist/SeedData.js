@@ -2,7 +2,7 @@ namespace('Checklist', {
   DesignerSeedData: [
     { section: 'graphic-design', name: 'intermediate-graphics-editor' },
     { section: 'graphic-design', name: 'color-theory' },
-    { section: 'graphic-design', name: 'aesthetic', complete: true },
+    { section: 'graphic-design', name: 'aesthetic' },
     { section: 'git', name: 'install-git' },
     { section: 'git', name: 'git-workflow' },
     { section: 'git', name: 'git-practice' },

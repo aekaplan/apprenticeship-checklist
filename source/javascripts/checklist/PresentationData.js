@@ -16,11 +16,13 @@ namespace("Checklist", {
       }
     },
     'blog': {
-      'wireframes-mockups': 'Create wireframes and mockups for your blog.',
-      'middleman': 'Set up Middleman and create a GitHub repo.',
-      'html5-css3': 'Write HTML5/CSS3 and get comfortable with designing in the browser.',
-      'simple-navigation': 'Create a simple navigation (Blog, Projects, About).',
-      'github-pages': 'Host your blog on GitHub Pages with a custom domain name (free).',
+      tasks: {
+        'wireframes-mockups': 'Create wireframes and mockups for your blog.',
+        'middleman': 'Set up Middleman and create a GitHub repo.',
+        'html5-css3': 'Write HTML5/CSS3 and get comfortable with designing in the browser.',
+        'simple-navigation': 'Create a simple navigation (Blog, Projects, About).',
+        'github-pages': 'Host your blog on GitHub Pages with a custom domain name (free).',
+      }
     }
   },
   DeveloperPresentationData: {}
