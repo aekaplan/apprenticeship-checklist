@@ -23,6 +23,12 @@ namespace("Checklist", {
         return model.get('complete') === true;
       });
       return completedTasks.length;
+    },
+
+    markAllTasksIncomplete: function() {
+      this.forEach(function(model) {
+        model.save({ complete: false });
+      });
     }
 
   })

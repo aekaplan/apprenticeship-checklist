@@ -2,10 +2,12 @@ namespace('Checklist', {
   ChecklistView: Backbone.View.extend({
     initialize: function(args) {
       this.template = args.template;
+      _.bindAll(this, 'markTasksIncomplete');
     },
 
     events: {
-      'click input': 'updateTask'
+      'click input': 'updateTask',
+      'click #clear-checklist': 'markTasksIncomplete'
     },
 
     render: function() {
@@ -40,6 +42,12 @@ namespace('Checklist', {
       var complete = el.is(':checked');
       var task = this.collection.findWhere({name: taskName});
       task.save({complete: complete});
+      this.renderProgressBar();
+    },
+
+    markTasksIncomplete: function() {
+      this.$el.find(':checkbox').attr('checked', false);
+      this.collection.markAllTasksIncomplete();
       this.renderProgressBar();
     }
   })

@@ -1,8 +1,11 @@
 ---
 title: Design Checklist
 ---
-<section>
-  <div class='container' data-id='checklist'>
+<div data-id='checklist'>
+
+  <section>
+  <div class='container'>
+    <button id='clear-checklist'>Deselect All</button>
     <h2>Graphic Design</h2>
     <div data-section-id='graphic-design'>
     </div>
@@ -21,9 +24,9 @@ title: Design Checklist
       <li><a href="http://8thlight.com/resources" target="_blank">8th Light Resources</a></li>
     </ul>
   </div>
-</section>
+  </section>
 
-<section>
+  <section>
   <div class="container">
     <h2>Git/GitHub</h2>
     <div data-section-id='git'>
@@ -37,9 +40,9 @@ title: Design Checklist
       <li><a href="http://try.github.io/levels/1/challenges/1" target="_blank">Code School - Try GitHub</a></li>
     </ul>
   </div>
-</section>
+  </section>
 
-<section>
+  <section>
   <div class='container'>
     <h2>Blog</h2>
     <div data-section-id='blog'>
@@ -55,9 +58,9 @@ title: Design Checklist
       <li><a href="http://www.adamkaplan.me" target="_blank">Adam Kaplan's Blog</a></li>
     </ul>
   </div>
-</section>
+  </section>
 
-<section>
+  <section>
   <div class='container'>
     <h2>Typography</h2>
 
@@ -99,9 +102,9 @@ title: Design Checklist
       <li><a href="http://www.google.com/fonts" target="_blank">Google Fonts</a></li>
     </ul>
   </div>
-</section>
+  </section>
 
-<section>
+  <section>
   <div class='container'>
     <h2>Front-end Development</h2>
     <label>
@@ -164,9 +167,9 @@ title: Design Checklist
       <li><a href="http://guides.rubyonrails.org/asset_pipeline.html" target="_blank">Rails Asset Pipeline</a></li>
     </ul>
   </div>
-</section>
+  </section>
 
-<section>
+  <section>
   <div class='container'>
     <h2>Responsive Web Design</h2>
     <label>
@@ -195,9 +198,9 @@ title: Design Checklist
       <li><a href="http://alistapart.com/article/for-a-future-friendly-web" target="_blank">For a Future-Friendly Web</a></li>
     </ul>
   </div>
-</section>
+  </section>
 
-<section>
+  <section>
   <div class='container'>
     <h2>jQuery</h2>
     <label>
@@ -222,9 +225,9 @@ title: Design Checklist
       <li><a href="http://99designs.com/designer-blog/2013/11/20/jquery-for-designers-5-coding-techniques-anyone-can-learn/" target="_blank">jQuery for Designers</a></li>
     </ul>
   </div>
-</section>
+  </section>
 
-<section>
+  <section>
   <div class="container">
     <h2>Professional Development</h2>
     <label>
@@ -250,9 +253,9 @@ title: Design Checklist
       <li><a href="https://artisan.8thlight.com" target="_blank">Artisan</a></li>
     </ul>
   </div>
-</section>
+  </section>
 
-<section>
+  <section>
   <div class="container">
     <h2>Communication</h2>
 
@@ -282,8 +285,9 @@ title: Design Checklist
       <li><a href="http://speaking.io/" target="_blank">Speaking.io</a></li>
     </ul>
   </div>
-</section>
+  </section>
 
+</div>
 <script id="section-template" type="text/x-handlebars-template">
   {{#each tasks}}
   <label>
@@ -295,27 +299,28 @@ title: Design Checklist
 
 <script type="text/javascript">
 
-$(function() {
-  var source = $('#section-template').html();
-  var template = Handlebars.compile(source);
+  $(function() {
+    var source = $('#section-template').html();
+    var template = Handlebars.compile(source);
 
-  Handlebars.registerHelper('checked', function(currentValue) {
-    return currentValue === true ? ' checked="checked"' : '';
-  });
+    Handlebars.registerHelper('checked', function(currentValue) {
+      return currentValue === true ? ' checked="checked"' : '';
+      });
 
-  var collection = new Checklist.Tasks();
-  collection.fetch();
-  if (collection.models.length === 0) {
+    var collection = new Checklist.Tasks();
+    collection.fetch();
+    if (collection.models.length === 0) {
     _.each(Checklist.DesignerSeedData, function(task) {
       collection.create(task);
-    });
-  }
+      });
+    }
 
-  var view = new Checklist.ChecklistView({
-    collection: collection,
-    template: template,
-    el: $('[data-id="checklist"]')
+    var view = new Checklist.ChecklistView({
+      collection: collection,
+      template: template,
+      el: $('[data-id="checklist"]')
+    });
+    view.render();
   });
-  view.render();
-});
 </script>
+
