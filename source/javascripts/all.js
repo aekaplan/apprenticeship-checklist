@@ -5,8 +5,8 @@
 //= require vendor/backbone.localStorage
 //= require namespace
 //= require checklist/Task
-//= require checklist/Section
-//= require checklist/SectionView
+//= require checklist/Tasks
+//= require checklist/ChecklistView
 //= require checklist/SeedData
 //= require checklist/PresentationData
 //= require_tree .

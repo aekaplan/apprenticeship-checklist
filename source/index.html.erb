@@ -2,7 +2,7 @@
 title: Design Checklist
 ---
 <section>
-  <div class='container'>
+  <div class='container' data-id='checklist'>
     <h2>Graphic Design</h2>
     <div data-section-id='graphic-design'>
     </div>
@@ -327,14 +327,19 @@ $(function() {
     return currentValue === true ? ' checked="checked"' : '';
   });
 
-  _.each(Checklist.DesignerSeedData, function(section) {
-    var c = new Checklist.Section(section.tasks, { name: section.name });
-    var v = new Checklist.SectionView({
-      collection: c,
-      el: $('[data-section-id=' + section.name + ']'),
-      template: template
+  collection = new Checklist.Tasks();
+  collection.fetch();
+  if (collection.models.length === 0) {
+    _.each(Checklist.DesignerSeedData, function(task) {
+      collection.create(task);
     });
-    v.render();
+  }
+
+  var view = new Checklist.ChecklistView({
+    collection: collection,
+    template: template,
+    el: $('[data-id="checklist"]')
   });
+  view.render();
 });
 </script>
