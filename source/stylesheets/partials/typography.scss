@@ -15,12 +15,12 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 1.1rem;
-  margin-bottom: .5rem;
+  margin: 1.5rem 0 .5rem 0;
 }
 
 p {
@@ -40,5 +40,5 @@ ul {
 }
 
 @media (min-width: 48rem) {
-  .small { font-size: 0.8rem; }
+  .small { font-size: 0.875rem; }
 }

@@ -12,7 +12,6 @@
 
 /* Layout
 -------------------------------------------------------------- */
-/* Apply box layout model to all elements */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -28,7 +27,7 @@ html {
 }
 
 @media (min-width: 48rem) {
-  html { font-size: 125%; }
+  html { font-size: 120%; }
 }
 
 body {
@@ -48,14 +47,13 @@ body {
 a {
   color: #4183c4;
   text-decoration: none;
+  &:hover { text-decoration: underline; }
 }
-
-a:hover { text-decoration: underline; }
 
 /* Section
 -------------------------------------------------------------- */
 section {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #eee;
   margin-top: 2rem;
   padding-top: 2rem;
   &:first-child {
@@ -68,7 +66,7 @@ section {
 hr {
   border: 0;
   border-top: 1px solid #ddd;
-  margin: 2em 0;
+  margin: 2.5em auto;
   width: 3rem;
 }
 
