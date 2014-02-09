@@ -46,6 +46,7 @@ body {
   .container {
     padding: 2rem 0;
     width: auto;
+    &.intro { padding: 4rem 0; }
   }
 }
 

@@ -76,6 +76,99 @@ namespace("Checklist", {
       }
     }
   },
-  DeveloperPresentationData: {}
+  DeveloperPresentationData: {
+    'crafting-code': {
+      tasks: {
+        'simple-applications': 'Can create simple applications without any assistance'
+      }
+    },
+    'tdd': {
+      tasks: {
+        'unit-testing': 'Unit Testing',
+        'acceptance-testing': 'Acceptance Testing'
+      }
+    },
+    'refactoring': {
+      tasks: {
+        'identify-smelly-code': 'Identifying smelly code',
+        'improve-design': 'Improving the design',
+        'stay-green': 'Staying green'
+      }
+    },
+    'design-principles': {
+      tasks: {
+        'solid': 'SOLID',
+        'package-principles': 'Package Principles'
+      }
+    },
+    'oo-design-patterns': {
+      tasks: {
+        'identify-patterns': 'Can identify patterns',
+        'apply-patterns': 'Can apply patterns',
+        'cost-benefits': 'Aware of costs and benefits of patterns'
+      }
+    },
+    'pair-programming': {
+      tasks: {
+        'articulate-design': 'Articulate a design or algorithm',
+        'driven-navigate': 'Effective as a driver and navigator'
+      }
+    },
+    'agile': {
+      tasks: {
+        'iterations': 'Works in iterations',
+        'story-cards': 'Story cards',
+        'demo-features': 'Demos new features',
+        'stand-ups': 'Stand-ups',
+        'retrospectives': 'Retrospectives'
+      }
+    },
+    'estimation': {
+      tasks: {
+        'commit-task-timeframe': 'Commit to a task and timeframe',
+        'identify-big-tasks': 'Identify tasks too large for a timeframe'
+      }
+    },
+    'customer-collaboration': {
+      tasks: {
+        'create-stories': 'Creating stories based on a customer discussion',
+        'create-acceptance-tests': 'Creating Acceptance Tests with the customer',
+        'transparency': 'Providing transparency to customer'
+      }
+    },
+    'polyglot': {
+      tasks: {
+        'multiple-language-constructs': 'Familiarity with a variety of language constructs',
+        'read-unfamiliar-languages': 'Can read code in unfamiliar languages',
+        'write-multiple-languages': 'Can write code in multiple languages'
+      }
+    },
+    'dev-communication': {
+      tasks: {
+        'live-presentations': 'Engaging live presentations',
+        'clear-writing': 'Clear writing'
+      }
+    },
+    'teaching': {
+      tasks: {
+        'teach-apprentices': 'Teach apprentices',
+        'teach-craftsmen': 'Teach craftsmen'
+      }
+    },
+    'community': {
+      tasks: {
+        'blogs': 'Blogs',
+        'user-groups': 'User groups',
+        'irc': 'IRC',
+        'email-lists': 'Email lists',
+      }
+    },
+    'collective-ownership': {
+      tasks: {
+        'conventions': 'Follow conventions',
+        'boy-scout-rule': 'Leave the code cleaner than you found it'
+      }
+    }
+  }
 });
 
