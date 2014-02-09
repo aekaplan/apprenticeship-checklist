@@ -1,0 +1,21 @@
+/* Buttons
+-------------------------------------------------------------- */
+button, .button {
+  @include border-radius(3px);
+  background: #f4f4f4;
+  display: block;
+  line-height: 1em;
+  padding: 0.5rem 1rem;
+  border: 0;
+  outline: 0;
+  color: #999;
+  font-size: 0.8rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #dededc;
+  vertical-align: bottom;
+  white-space: nowrap;
+  font-weight: 400;
+  font-style: normal;
+}

@@ -11,7 +11,21 @@
     { "section": "blog", "name": "middleman" },
     { "section": "blog", "name": "html5-css3" },
     { "section": "blog", "name": "simple-navigation" },
-    { "section": "blog", "name": "github-pages" }
+    { "section": "blog", "name": "github-pages" },
+    { "section": "typography", "name": "master-rules" },
+    { "section": "typography", "name": "pair-fonts" },
+    { "section": "typography", "name": "size-fonts" },
+    { "section": "typography", "name": "punctuation" },
+    { "section": "typography", "name": "web-fonts" },
+    { "section": "front-end", "name": "working-knowledge" },
+    { "section": "front-end", "name": "web-standards" },
+    { "section": "front-end", "name": "cross-browser" },
+    { "section": "front-end", "name": "guidelines" },
+    { "section": "front-end", "name": "optimization" },
+    { "section": "front-end", "name": "web-applications" },
+    { "section": "front-end", "name": "pre-processing" },
+    { "section": "front-end", "name": "install-sass" },
+    { "section": "front-end", "name": "variables-nesting-mixins" }
   ],
   "developer": [
     { "section": "crafting-code", "name": "simple-applications" },

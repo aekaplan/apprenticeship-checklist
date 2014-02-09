@@ -1,0 +1,21 @@
+/* Inputs
+-------------------------------------------------------------- */
+input[type="checkbox"] {
+  float: left;
+  margin: 0.3rem 0.6rem 0 0;
+}
+
+label {
+  color: #333;
+  display: block;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+label:last-child { margin-bottom: 0; }
+
+label span {
+  float: left;
+  width: 90%;
+}
+
