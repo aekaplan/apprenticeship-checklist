@@ -25,7 +25,20 @@
     { "section": "front-end", "name": "web-applications" },
     { "section": "front-end", "name": "pre-processing" },
     { "section": "front-end", "name": "install-sass" },
-    { "section": "front-end", "name": "variables-nesting-mixins" }
+    { "section": "front-end", "name": "variables-nesting-mixins" },
+    { "section": "responsive", "name": "no-framework" },
+    { "section": "responsive", "name": "fluid-design" },
+    { "section": "responsive", "name": "grid" },
+    { "section": "jquery", "name": "library" },
+    { "section": "jquery", "name": "selectors" },
+    { "section": "jquery", "name": "dom" },
+    { "section": "professional-development", "name": "agile-process" },
+    { "section": "professional-development", "name": "estimate" },
+    { "section": "professional-development", "name": "attention-to-detail" },
+    { "section": "communication", "name": "ipm" },
+    { "section": "communication", "name": "lightning-talks" },
+    { "section": "communication", "name": "speak-with-authority" },
+    { "section": "communication", "name": "confident-speaker" }
   ],
   "developer": [
     { "section": "crafting-code", "name": "simple-applications" },

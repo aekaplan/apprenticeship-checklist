@@ -10,9 +10,8 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   overflow: hidden;
+  &:last-child { margin-bottom: 0; }
 }
-
-label:last-child { margin-bottom: 0; }
 
 label span {
   float: left;

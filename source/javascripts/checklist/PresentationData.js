@@ -45,6 +45,35 @@ namespace("Checklist", {
         'install-sass': 'Install and setup Sass.',
         'variables-nesting-mixins': 'Demonstrate use of variables, nesting and mixins.'
       }
+    },
+    'responsive': {
+      tasks: {
+        'no-framework': 'Implement a responsive web design without relying on a framework.',
+        'fluid-design': 'Understand the importance of fluid design and the downfalls of targeting specific devices.',
+        'grid': 'Make grid/modular scale creation part of your process.'
+      }
+    },
+    'jquery': {
+      tasks: {
+        'library': 'Import and load the library.',
+        'selectors': 'Understand jQuery’s selectors.',
+        'dom': 'Manipulate the DOM.'
+      }
+    },
+    'professional-development': {
+      tasks: {
+        'agile-process': 'Familiarize yourself with the Agile process.',
+        'estimate': 'Understand and estimate using P.E.R.T.',
+        'attention-to-detail': 'Develop an attention to detail.'
+      }
+    },
+    'communication': {
+      tasks: {
+        'ipm': 'Attend iteration planning meetings, or IPMs.',
+        'lightning-talks': 'Deliver at least two lightning talks.',
+        'speak-with-authority': 'Speak about design related issues with authority.',
+        'confident-speaker': 'Become a confident public speaker.'
+      }
     }
   },
   DeveloperPresentationData: {}
