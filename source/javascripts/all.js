@@ -6,6 +6,8 @@
 //= require namespace
 //= require checklist/Task
 //= require checklist/Tasks
+//= require checklist/DesignTasks
+//= require checklist/DevTasks
 //= require checklist/ChecklistView
 //= require checklist/PresentationData
 //= require_tree .

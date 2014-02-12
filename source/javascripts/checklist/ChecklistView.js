@@ -2,6 +2,7 @@ namespace('Checklist', {
   ChecklistView: Backbone.View.extend({
     initialize: function(args) {
       this.template = args.template;
+      this.presenterData = args.presenterData;
       _.bindAll(this, 'markTasksIncomplete');
     },
 
@@ -29,7 +30,7 @@ namespace('Checklist', {
     presentTasks: function(tasks) {
       return _.map(tasks, function(task) {
         return {
-          description: Checklist.DesignerPresentationData[task.get('section')].tasks[task.get('name')],
+          description: this.presenterData[task.get('section')].tasks[task.get('name')],
           complete: task.get('complete'),
           name: task.get('name')
         }

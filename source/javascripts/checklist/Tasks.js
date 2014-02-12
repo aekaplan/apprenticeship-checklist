@@ -1,7 +1,8 @@
 namespace("Checklist", {
   Tasks: Backbone.Collection.extend({
-    localStorage: new Backbone.LocalStorage("Checklist.Tasks"),
     model: Checklist.Task,
+
+    localStorage: undefined, // define in subclass
 
     sections: function() {
       var allSections = _.map(this.models, function(model) {

@@ -16,10 +16,16 @@
       return currentValue === true ? ' checked="checked"' : '';
       });
 
-    var collection = new Checklist.Tasks();
+    <% if task_type == "design" %>
+      var collection = new Checklist.DesignTasks();
+      var presenterData = Checklist.DesignerPresentationData
+    <% else %>
+      var collection = new Checklist.DevTasks();
+      var presenterData = Checklist.DeveloperPresentationData
+    <% end %>
     collection.fetch();
     if (collection.models.length === 0) {
-      var designerData = <%= data.tasks.designer.to_json %>
+      var designerData = <%= tasks.to_json %>
       _.each(designerData, function(task) {
         collection.create(task);
         });
@@ -27,6 +33,7 @@
 
     var view = new Checklist.ChecklistView({
       collection: collection,
+      presenterData: presenterData,
       template: template,
       el: $('body')
     });

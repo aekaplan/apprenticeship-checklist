@@ -165,4 +165,4 @@ title: User Experience Checklist
   </div>
 </div>
 
-<%= partial(:checklist_javascript) %>
+<%= partial :checklist_javascript, :locals => { :tasks => data.tasks.designer, :task_type => "design" } %>

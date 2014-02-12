@@ -94,4 +94,4 @@ title: Software Development Checklist
   </div>
 </div>
 
-<%= partial(:checklist_javascript) %>
+<%= partial :checklist_javascript, :locals => { :tasks => data.tasks.developer, :task_type => "developer" } %>
