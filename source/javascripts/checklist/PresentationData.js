@@ -111,7 +111,7 @@ namespace("Checklist", {
     'pair-programming': {
       tasks: {
         'articulate-design': 'Articulate a design or algorithm',
-        'driven-navigate': 'Effective as a driver and navigator'
+        'drive-navigate': 'Effective as a driver and navigator'
       }
     },
     'agile': {
