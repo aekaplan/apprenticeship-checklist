@@ -5,7 +5,7 @@ Please use Ruby 1.9 or greater.
 
 #### Git Clone
 ```
-git@github.com:aekaplan/checklist.git
+git@github.com:aekaplan/apprenticeship-checklist.git
 ```
 
 #### Bundle Install
